@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="resetSelection()">
+    <div class="container">
+        <select name="country" id="country" onchange="makeSubmenu(this.value)">
+            <option value="country" selected disabled hidden>country</option>
+            <option value="Iran">Iran</option>
+            <option value="England">England</option>
+        </select>
+        <select name="town" id="town">
+            <option></option>
+        </select>
+        <button onclick="displaySelected()">show selected</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

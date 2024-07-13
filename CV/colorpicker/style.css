@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.canvas {
+    text-align: center;
+}
+.button {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#grey {
+    background-color: grey;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#white{
+    background-color: white;
+}

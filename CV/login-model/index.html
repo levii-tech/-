@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Mulish', 'sans-serif'],
+          mono: ['Rokkitt', 'monospace'],
+        },
+      },
+    }
+  </script>
+    <title>login model</title>
+</head>
+<body>
+    <!-- global container -->
+    <div class="flex items-center justify-center bg-rose-50 min-h-screen">
+        <!-- card container -->
+        <div class="relative flex flex-col m-6 space-y-10 md:space-y-0 bg-white rounded-2xl shadow-2xl md:flex-row md:m-0">
+            <!-- left side -->
+            <div class="p-6 md:p-20">
+                <!-- top content -->
+                <h2 class="font-mono mb-5 font-bold text-4xl">Log in</h2>
+                <p class=" max-w-sm mb-12 font-light bg-grey-600 font-sans">
+                    Log in to your account to upload or download pictures, videos or
+            music.
+                </p>
+                <input type="text" class="w-full border p-6 placeholder:font-sans placeholder:font-light border-grey-300 rounded-md" placeholder="Enter your Email Address">
+                <!-- middle content -->
+                <div class="flex flex-col items-center space-y-6 mt-6 justify-between md:flex-row md:space-y-0">
+                    <div class="font-thin text-cyan-700 cursor-pointer">Forget Password?</div>
+                    <button class="w-full md:w-auto flex justify-center items-center p-6 px-9 bg-cyan-700 space-x-4 text-white shadow-sm shadow-cyan-100 rounded-md hover:-translate-y-0.5 duration-150 hover:shadow-lg transition">
+                        <span>Next</span>
+                        <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-7"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#ffffff"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <line x1="13" y1="18" x2="19" y2="12" />
+                    <line x1="13" y1="6" x2="19" y2="12" />
+                  </svg>
+                    </button>
+                </div>
+                <!-- border -->
+                <div class="border-b border-b-gray-300 mt-12"></div>
+                <!-- bottom content -->
+                <p class="text-center text-gray-400 text-sm py-6 font-thin">or log in with</p>
+                <!-- bottom buttons container -->
+                <div class="flex flex-col items-center md:flex-row space-y-6 md:space-y-0 md:space-x-6 space-x-0">
+                    <button class="flex justify-center items-center py-2 border-2 border-gray-300 w-full rounded-md space-x-3 md:w-1/2 transition shadow-sm hover:shadow-lg hover:bg-opacity-30 hover:-translate-y-0.5">
+                        <img src="./images/facebook.png" alt="" class="w-9">
+                        <span>Facebook</span>
+                    </button>
+
+                    <button class="flex justify-center items-center py-2 border-2 border-gray-300 w-full rounded-md space-x-3 md:w-1/2 transition shadow-sm hover:shadow-lg hover:bg-opacity-30 hover:-translate-y-0.5">
+                        <img src="./images/google.png" alt="" class="w-9">
+                        <span>Google</span>
+                    </button>
+                </div>
+            </div>
+            <!-- right side (image) -->
+            <img src="./images/image.jpg" alt="" class="hidden md:block w-[430px]">
+            <!-- close button -->
+            <div class="group absolute -top-5 right-4 flex justify-center items-center w-8 h-8 rounded-full bg-gray-300 md:top-4 hover:-translate-y-0.5 cursor-pointer md:bg-white transition duration-150">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-black group-hover:text-gray-600"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: black;
+  /* position: absolute;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background-image: url(img/hero-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1;
+}
+nav {
+  position: fixed;
+  width: max-content;
+  padding: 2rem;
+}
+nav a img {
+  width: 150px;
+}
+.form-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.808);
+  width: 450px;
+  border-radius: 4px;
+  padding: 70px;
+}
+
+.form-card h1 {
+  color: white;
+  font-size: 2rem;
+}
+.form-card form {
+  margin: 25px 0 65px 0;
+}
+form .information {
+  height: 50px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.information input {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  color: white;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 0 20px;
+}
+/* درباره ایز و ور بخون */
+.information input:is(:focus, :valid) {
+  background: #444;
+  padding: 16px 20px 0;
+}
+.information label {
+  color: #8c8c8c;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.1s ease;
+  font-size: 1rem;
+}
+.information input:is(:focus, :valid) ~ label {
+  font-size: 0.75rem;
+  transform: translateY(-130%);
+}
+form button {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #e50914;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 25px 0 10px 0;
+  transition: 0.1s ease;
+}
+form button:hover {
+  background-color: #c40812;
+}
+
+.form-card a {
+  text-decoration: none;
+}
+.form-card a:hover {
+  text-decoration: underline;
+}
+.form-card :where(label, small, p, a) {
+  color: #b3b3b3;
+}
+form .form-help {
+  display: flex;
+  justify-content: space-between;
+}
+form .remember-me {
+  display: flex;
+}
+
+form .remember-me input {
+  margin-right: 5px;
+  accent-color: #b3b3b3;
+  /* باید دربارش بخونی */
+}
+
+form .form-help :where(label, a) {
+  font-size: 0.9rem;
+}
+
+.form-card p a {
+  color: #fff;
+}
+
+.form-card small {
+  display: block;
+  margin-top: 15px;
+  color: #b3b3b3;
+}
+
+.form-card small a {
+  color: #0071eb;
+}
+@media (max-width: 740px) {
+    body::before {
+      display: none;
+    }
+  
+    nav,
+    .form-card {
+      padding: 20px;
+    }
+  
+    nav a img {
+      width: 140px;
+    }
+  
+    .form-card {
+      width: 100%;
+      top: 50%;
+    }
+  
+    .form-wrapper form {
+      margin: 25px 0 40px;
+    }
+  }
